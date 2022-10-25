@@ -10,9 +10,9 @@
     
 <?php
 $servername = "localhost";
-$username = "projecto_homework3";
-$password = "0w_zeP}]OVy0";
-$dbname = "projecto_homework3";
+$username = "amiresta_amirsta";
+$password = "z]0qP-?ge@PG";
+$dbname = "amiresta_HW3-instructors-database";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -20,7 +20,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
 $sql = "delete from instructor where instructor_id=?";
 //echo $sql;
     $stmt = $conn->prepare($sql);
