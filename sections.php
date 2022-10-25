@@ -49,7 +49,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["number"]?></td>
     <td><?=$row["section_number"]?></td>
     <td><?=$row["instructor_name"]?></td>
-   <td> <a href="section-edit.php">link text</a></td>
+   <td> <a href="section-edit.php">Edit</a></td>
   
   </tr>
 <?php
