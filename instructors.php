@@ -45,19 +45,7 @@ if ($result->num_rows > 0) {
   <tr>
     <td><?=$row["instructor_id"]?></td>
     <td><a href="instructor-section.php?id=<?=$row["instructor_id"]?>"><?=$row["instructor_name"]?></a></td>
-     <td>
- <button class="open-button" onclick="openForm()">Edit</button>
-    </td>
-        <form method="post" action="instructor-edit-save.php">
-  <div class="mb-3">
-    <label for="instructorName" class="form-label">Name</label>
-    <input type="text" class="form-control" id="instructorName" aria-describedby="nameHelp" name="iName" value="<?=$row['instructor_name']?>">
-    <div id="nameHelp" class="form-text">Enter the instructor's name.</div>
-  </div>
-  <input type="hidden" name="iid" value="<?=$row['instructor_id']?>">
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-    
+
   </tr>
 <?php
   }
