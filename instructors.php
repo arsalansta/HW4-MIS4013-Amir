@@ -56,7 +56,7 @@ if ($result->num_rows > 0) {
   </div>
   <input type="hidden" name="iid" value="<?=$row['instructor_id']?>">
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>)
+</form>
     
   </tr>
 <?php
