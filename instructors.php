@@ -99,21 +99,7 @@ $conn->close();
       </div>
     </div>
     
-    $iName = $_POST['iName'];
-
-$sql = "insert into instructor (instructor_name) value (?)";
-//echo $sql;
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $iName);
-    $stmt->execute();
-?>
-    
-    <h1>Add Instructor</h1>
-<div class="alert alert-success" role="alert">
-  New instructor added.
-</div>
-    <a href="instructors.php" class="btn btn-primary">Go back</a>
-    
+  
     
     
   
