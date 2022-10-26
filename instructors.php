@@ -47,9 +47,7 @@ if ($result->num_rows > 0) {
     <td><a href="instructor-section.php?id=<?=$row["instructor_id"]?>"><?=$row["instructor_name"]?></a></td>
 
   </tr>
-     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="instructor-add.php">
-        Add New
-      </button>
+    
 <?php
   }
 } else {
@@ -60,5 +58,11 @@ $conn->close();
   </tbody>
     </table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  
+    
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="instructor-add.php">
+        Add New
+      </button>
+  
   </body>
 </html>
