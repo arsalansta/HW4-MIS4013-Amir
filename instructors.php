@@ -75,7 +75,7 @@ $conn->close();
               <form method="post" action="instructor-add-save.php">
   <div class="mb-3">
     <label for="instructorId" class="form-label">ID</label>
-    <input type="text" class="form-control" id="instructor_id" aria-describedby="IDHelp" name="iID">
+    <input type="text" class="form-control" id="instructor_id" aria-describedby="IDHelp" name="iId">
     <div id="IDHelp" class="form-text">Enter the instructor's ID.
     
       <br>
@@ -85,9 +85,9 @@ $conn->close();
       
       <label for="instructorName" class="form-label">Name</label>
     <input type="text" class="form-control" id="instructorName" aria-describedby="nameHelp" name="iName">
-    <div id="nameHelp" class="form-text">Enter the instructor's name.
+    <div id="nameHelp" class="form-text">Enter the instructor's Name.
       
-      
+        <br>  <br>  <br>  <br>
     
     </div>
   </div>
