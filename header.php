@@ -18,10 +18,40 @@
    
      
    
-        <a class="nav-link" href="#">Link</a>
-  
+    
+            <a class="nav-link" href="instructors.php">instructors</a>
+	  
+	   <br>
+	    <a class="nav-link" href="courses.php">Courses</a>
+	   <br>
+	  
+	     <a class="nav-link" href="sections.php">sections</a>
+     <br>
+	
+	
+        <a class="nav-link" href="instructor-cards.php">instructor cards</a>
+	  
+	  
+    
+	
+       
+    
+		
+ <br>
+
+<a class="nav-link" href="students.php">students</a>
+		
+		
      
-        
+    
+
+  </br>
+	<a class="nav-link" href="JobsAndRoles.php">Jobs And Roles</a>
+	
+	
+    
+    <br>
+    
       
   
       
