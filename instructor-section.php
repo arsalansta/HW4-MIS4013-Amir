@@ -1,6 +1,3 @@
-<?php require_once("header.php"); ?>
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,9 +21,9 @@
   <tbody>
     <?php
 $servername = "localhost";
-$username = "amiresta_amirsta";
-$password = "z]0qP-?ge@PG";
-$dbname = "amiresta_HW3-instructors-database";
+$username = "projecto_homework3";
+$password = "0w_zeP}]OVy0";
+$dbname = "projecto_homework3";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -36,18 +33,10 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-
-
-
 $sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id where i.instructor_id=" . $iid;
 //echo $sql;
-    $stmt = $conn->prepare($sql);
-    $stms -> bind_param("i",$iid);
-    $stmt -> execute();
-    $result=$stmt->get_result();
-    
-    
-    
+    $result = $conn->query($sql);
+
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
