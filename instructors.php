@@ -74,9 +74,19 @@ $conn->close();
             <div class="modal-body">
               <form method="post" action="instructor-add-save.php">
   <div class="mb-3">
-    <label for="instructorName" class="form-label">Name</label>
+    <label for="instructorId" class="form-label">ID</label>
+    <input type="text" class="form-control" id="instructor_id" aria-describedby="IDHelp" name="iID">
+    <div id="IDHelp" class="form-text">Enter the instructor's ID.
+    
+      <br>
+      
+      <label for="instructorName" class="form-label">Name</label>
     <input type="text" class="form-control" id="instructorName" aria-describedby="nameHelp" name="iName">
-    <div id="nameHelp" class="form-text">Enter the instructor's name.</div>
+    <div id="nameHelp" class="form-text">Enter the instructor's name.
+      
+      
+    
+    </div>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
