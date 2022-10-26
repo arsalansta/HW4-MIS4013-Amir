@@ -57,18 +57,18 @@ $conn->close();
 ?>
   </tbody>
     </table>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="instructor-add.php">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addinstructor">
         Add New
       </button>
     
     
     
     
-    <div class="modal fade" id="addCustomer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addCustomerLabel" aria-hidden="true">
+    <div class="modal fade" id="addinstructor" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addinstructorLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="addCustomerLabel">Add Customer</h1>
+              <h1 class="modal-title fs-5" id="addinstructor">Add Customer</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
