@@ -36,10 +36,18 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
+
+
+
 $sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id where i.instructor_id=" . $iid;
 //echo $sql;
-    $result = $conn->query($sql);
-
+    $stmt = $conn->prepare($sql);
+    $stms -> bind_param("i",$iid);
+    $stmt -> execute();
+    $result=$stmt->get_result();
+    
+    
+    
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
