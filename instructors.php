@@ -79,6 +79,9 @@ $conn->close();
     <div id="IDHelp" class="form-text">Enter the instructor's ID.
     
       <br>
+        <br>
+        <br>
+        <br>
       
       <label for="instructorName" class="form-label">Name</label>
     <input type="text" class="form-control" id="instructorName" aria-describedby="nameHelp" name="iName">
