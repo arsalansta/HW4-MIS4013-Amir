@@ -2,6 +2,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,6 +31,7 @@
       <th>Number</th>
       <th>Section</th>
       <th>Instructor</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -49,27 +61,22 @@ if ($result->num_rows > 0) {
     <td><?=$row["number"]?></td>
     <td><?=$row["section_number"]?></td>
     <td><?=$row["instructor_name"]?></td>
-   <td> <a href="section-edit.php">Edit needs to be fixed</a></td>
-  
+    <td>
+      <form method="post" action="section-edit.php">
+        <input type="hidden" name="id" value="<?=$row["section_id"]?>">
+        <input type="submit" value="Edit">
+      </form>
+    </td>
   </tr>
 <?php
   }
 } else {
   echo "0 results";
 }
-    
-    
-    
 $conn->close();
 ?>
   </tbody>
     </table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  
-
-  
-  
-  
-  
   </body>
 </html>
