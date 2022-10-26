@@ -38,14 +38,14 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   switch ($_POST['saveType']) {
     case 'Add':
-      $sqlAdd = "insert into JobsAndRoles (instructor_name) value (?)";
+      $sqlAdd = "insert into JobsAndRoles (job_name) value (?)";
       $stmtAdd = $conn->prepare($sqlAdd);
       $stmtAdd->bind_param("s", $_POST['iName']);
       $stmtAdd->execute();
       echo '<div class="alert alert-success" role="alert">New JobsAndRoles added.</div>';
       break;
     case 'Edit':
-      $sqlEdit = "update JobsAndRoles set instructor_name=? where job_id=?";
+      $sqlEdit = "update JobsAndRoles set job_name=? where job_id=?";
       $stmtEdit = $conn->prepare($sqlEdit);
       $stmtEdit->bind_param("si", $_POST['iName'], $_POST['iid']);
       $stmtEdit->execute();
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <tbody>
           
 <?php
-$sql = "SELECT job_id, instructor_name from JobsAndRoles";
+$sql = "SELECT job_id, job_name from JobsAndRoles";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -86,7 +86,7 @@ if ($result->num_rows > 0) {
           
           <tr>
             <td><?=$row["job_id"]?></td>
-            <td><a href="instructor-section.php?id=<?=$row["job_id"]?>"><?=$row["instructor_name"]?></a></td>
+            <td><a href="instructor-section.php?id=<?=$row["job_id"]?>"><?=$row["job_name"]?></a></td>
             <td>
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editJobsAndRoles<?=$row["job_id"]?>">
                 Edit
@@ -102,7 +102,7 @@ if ($result->num_rows > 0) {
                       <form method="post" action="">
                         <div class="mb-3">
                           <label for="editJobsAndRoles<?=$row["job_id"]?>Name" class="form-label">Name</label>
-                          <input type="text" class="form-control" id="editJobsAndRoles<?=$row["job_id"]?>Name" aria-describedby="editJobsAndRoles<?=$row["job_id"]?>Help" name="iName" value="<?=$row['instructor_name']?>">
+                          <input type="text" class="form-control" id="editJobsAndRoles<?=$row["job_id"]?>Name" aria-describedby="editJobsAndRoles<?=$row["job_id"]?>Help" name="iName" value="<?=$row['job_name']?>">
                           <div id="editJobsAndRoles<?=$row["job_id"]?>Help" class="form-text">Enter the Jobs or Roles </div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['job_id']?>">
