@@ -47,7 +47,7 @@ if ($result->num_rows > 0) {
     <td><a href="instructor-section.php?id=<?=$row["instructor_id"]?>"><?=$row["instructor_name"]?></a></td>
 
   </tr>
-     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCustomer">
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="instructor-add.php">
         Add New
       </button>
 <?php
