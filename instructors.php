@@ -1,11 +1,4 @@
 
-Dashboard
-MIS-4013-001
-instructors.php
-
-Immersive Reader
-
-instructors.php
 <!doctype html>
 <html lang="en">
   <head>
