@@ -19,16 +19,16 @@
      
    
     
-            <a class="nav-link" href="instructors.php">instructors</a>
+            <a class="navbar-brand" href="instructors.php">instructors</a>
 	  
-	    <a class="nav-link" href="courses.php">Courses</a>
+	    <a class="navbar-brand" href="courses.php">Courses</a>
 	   
 	  
-	     <a class="nav-link" href="sections.php">sections</a>
+	     <a class="navbar-brand" href="sections.php">sections</a>
     
 	
 	
-        <a class="nav-link" href="instructor-cards.php">instructor cards</a>
+        <a class="navbar-brand" href="instructor-cards.php">instructor cards</a>
 	  
 	  
     
@@ -37,14 +37,14 @@
     
 	
 
-<a class="nav-link" href="students.php">students</a>
+<a class="navbar-brand" href="students.php">students</a>
 		
 		
      
     
 
  
-	<a class="nav-link" href="JobsAndRoles.php">Jobs And Roles</a>
+	<a class="navbar-brand" href="JobsAndRoles.php">Jobs And Roles</a>
 	
 	
     
