@@ -1,4 +1,8 @@
 <?php require_once("header.php"); ?>
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,12 +25,11 @@
   </thead>
   <tbody>
     <?php
-$servername = "localhost";
+	$servername = "localhost";
 $username = "amiresta_amirsta";
 $password = "z]0qP-?ge@PG";
 $dbname = "amiresta_HW3-instructors-database";
-    
-    
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
