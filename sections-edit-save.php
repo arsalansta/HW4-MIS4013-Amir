@@ -9,11 +9,14 @@
   <body>
     
 <?php
-$servername = "localhost";
-$username = "projecto_homework3";
-$password = "0w_zeP}]OVy0";
-$dbname = "projecto_homework3";
-
+    
+    
+	$servername = "localhost";
+$username = "amiresta_amirsta";
+$password = "z]0qP-?ge@PG";
+$dbname = "amiresta_HW3-instructors-database";
+    
+    
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
