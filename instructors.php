@@ -72,24 +72,14 @@ $conn->close();
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form method="post" action="">
-                <div class="mb-3">
-                  <label for="customerName" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="cName" aria-describedby="nameHelp" name="cName">
-                  <div id="nameHelp" class="form-text">Enter the Customer's name.</div>
-                   <label for="EmployeeID" class="form-label">Employee ID</label>
-                   <input type="text" class="form-control" id="sid" aria-describedby="nameHelp" name="eid">
-                   <div id="nameHelp" class="form-text">Enter the Employee's ID</div>
-                          <label for="ProductName" class="form-label">Product Name</label>
-                          <input type="text" class="form-control" id="pName" aria-describedby="nameHelp" name="pName">
-                          <div id="nameHelp" class="form-text">Enter the Product Name</div>
-                          <label for="ProductCost" class="form-label">Product Cost</label>
-                          <input type="text" class="form-control" id="pCost" aria-describedby="nameHelp" name="pCost">
-                          <div id="nameHelp" class="form-text">Enter the Product's cost</div>
-                </div>
-                <input type="hidden" name="saveType" value="Add">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+              <form method="post" action="instructor-add-save.php">
+  <div class="mb-3">
+    <label for="instructorName" class="form-label">Name</label>
+    <input type="text" class="form-control" id="instructorName" aria-describedby="nameHelp" name="iName">
+    <div id="nameHelp" class="form-text">Enter the instructor's name.</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
             </div>
           </div>
         </div>
