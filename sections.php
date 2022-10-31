@@ -27,8 +27,8 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>Prefix</th>
-      <th>Number</th>
+ 
+      <th>course_number</th>
       <th>Section</th>
       <th>Instructor</th>
       <th></th>
@@ -47,7 +47,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id";
+$sql = "select section_id, section_number, i.instructor_name, c.course_number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
