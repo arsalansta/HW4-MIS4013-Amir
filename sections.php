@@ -56,8 +56,8 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["section_id"]?></td>
-    <td><?=$row["prefix"]?></td>
-    <td><?=$row["number"]?></td>
+
+    <td><?=$row["course_number"]?></td>
     <td><?=$row["section_number"]?></td>
     <td><?=$row["instructor_name"]?></td>
     <td>
