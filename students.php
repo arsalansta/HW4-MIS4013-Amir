@@ -96,9 +96,9 @@ if ($result->num_rows > 0) {
                     <div class="modal-body">
                       <form method="post" action="">
                         <div class="mb-3">
-                          <label for="editOUstudents<?=$row["student_id"]?>Name" class="form-label">Name</label>
+                          <label for="editOUstudents<?=$row["student_name"]?>Name" class="form-label">Name</label>
                           <input type="text" class="form-control" id="editOUstudents<?=$row["student_id"]?>Name" aria-describedby="editOUstudents<?=$row["student_id"]?>Help" name="iName" value="<?=$row['student_name']?>">
-                          <div id="editOUstudents"<?=$row["istudent_id"]?>Help" class="form-text">Enter the OUstudents's name.</div>
+                          <div id="editOUstudents<?=$row["istudent_id"]?>Help" class="form-text">Enter the OUstudents's name.</div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['student_id']?>">
                         <input type="hidden" name="saveType" value="Edit">
