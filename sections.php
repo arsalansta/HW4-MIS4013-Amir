@@ -40,7 +40,6 @@ $servername = "localhost";
 $username = "amiresta_amirsta";
 $password = "z]0qP-?ge@PG";
 $dbname = "amiresta_HW3-instructors-database";
-
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
