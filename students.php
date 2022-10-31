@@ -33,37 +33,7 @@ if ($conn->connect_error) {
 }
 
     
-    
-    
-    
-
-                    $sql = "SELECT student_id, student_name from OUstudents";
-                    $result = $conn->query($sql);
-
-                    if ($result->num_rows > 0) {
-                        // output data of each row
-                        while ($row = $result->fetch_assoc()) {
-                    ?>
-                    < tr >
-                    < td ><?=$row["student_id"] ?></ td >
-  
-                    < td ><?=$row["student_name"] ?></ td >
-    
-
-
-                    </ tr >
-                    <? php
-                            }
-                    } else
-                    {
-                        echo "0 results";
-                    }
-                    $conn->close();
-                    ?>
-                    </ tbody >
-                    </ table >
-
-
+ 
 
 
 
