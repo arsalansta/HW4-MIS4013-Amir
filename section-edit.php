@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
 <form method="post" action="section-edit-save.php">
   <div class="mb-3">
     <label for="sectionNumber" class="form-label">Section number</label>
-    <input type="text" class="form-control" id="sectionNumber" aria-describedby="nameHelp" name="sNumber" value="<?=$row['section_number']?>">
+    <input type="text" class="form-control" id="sectionNumber" aria-describedby="nameHelp" name="section_Number" value="<?=$row['section_number']?>">
     <div id="nameHelp" class="form-text">Enter the section number.</div>
   </div>
   <div class="mb-3">
