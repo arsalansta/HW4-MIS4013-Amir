@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 }
 $sql = "SELECT * from section where section_id=?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("si", $_POST['id']);
+$stmt->bind_param("i", $_POST['id']);
 $stmt->execute();
 $result = $stmt->get_result();
 
