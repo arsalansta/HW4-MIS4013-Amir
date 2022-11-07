@@ -22,12 +22,12 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$iName = $_POST['iName'];
+$section_Number = $_POST['section_Number'];
 
 $sql = "update instructor set instructor_name=? where instructor_id=?";
 //echo $sql;
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ii", $iName, $_POST['iid']);
+    $stmt->bind_param("ii", $section_Number, $_POST['iid']);
     $stmt->execute();
 ?>
     
