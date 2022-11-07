@@ -17,16 +17,16 @@ $dbname = "amiresta_HW3-instructors-database";
     
     
     
-    // Create connection
+ // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT instructor_id, instructor_name from instructor where instructor_id=?";
+$sql = "SELECT * from section where section_id=?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $_POST['iid']);
+$stmt->bind_param("i", $_POST['id']);
 $stmt->execute();
 $result = $stmt->get_result();
 
@@ -34,13 +34,32 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
 ?>
-<form method="post" action="instructor-edit-save.php">
+<form method="post" action="section-edit-save.php">
   <div class="mb-3">
-    <label for="instructorName" class="form-label">Name</label>
-    <input type="text" class="form-control" id="instructorName" aria-describedby="nameHelp" name="iName" value="<?=$row['instructor_name']?>">
-    <div id="nameHelp" class="form-text">Enter the instructor's name.</div>
+    <label for="sectionNumber" class="form-label">Section number</label>
+    <input type="text" class="form-control" id="sectionNumber" aria-describedby="nameHelp" name="sNumber" value="<?=$row['section_number']?>">
+    <div id="nameHelp" class="form-text">Enter the section number.</div>
   </div>
-  <input type="hidden" name="iid" value="<?=$row['instructor_id']?>">
+  <div class="mb-3">
+  <label for="instructorList" class="form-label">Instructor</label>
+<select class="form-select" aria-label="Select instructor" id="instructorList" name="iid">
+<?php
+    $instructorSql = "select * from instructor order by instructor_name";
+    $instructorResult = $conn->query($instructorSql);
+    while($instructorRow = $instructorResult->fetch_assoc()) {
+      if ($instructorRow['instructor_id'] == $row['instructor_id']) {
+        $selText = " selected";
+      } else {
+        $selText = "";
+      }
+?>
+  <option value="<?=$instructorRow['instructor_id']?>"<?=$selText?>><?=$instructorRow['instructor_name']?></option>
+<?php
+    }
+?>
+</select>
+  </div>
+  <input type="hidden" name="id" value="<?=$row['section_id']?>">
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <?php
