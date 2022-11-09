@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 }
 $sNumber = $_POST['sNumber'];
 
-$sql = "update instructor set instructor_name=? where instructor_id=?";
+$sql = "update instructor set section_number=? where instructor_id=?";
 //echo $sql;
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("si", $sNumber, $_POST['iid']);
