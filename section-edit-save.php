@@ -24,10 +24,10 @@ if ($conn->connect_error) {
 }
 $sNumber = $_POST['sNumber'];
 
-$sql = "update instructor set section_number=? where instructor_id=?";
+$sql = "update section set section_number=? where section_id=?";
 //echo $sql;
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("si", $sName, $_POST['iid']);
+    $stmt->bind_param("si", $sNumber, $_POST['iid']);
     $stmt->execute();
 ?>
     
